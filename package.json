@@ -10,6 +10,10 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/istree-test-stencil/istree-test-stencil.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chocotree/istree-test-stencil.git"
+  },
   "files": [
     "dist/",
     "loader/"

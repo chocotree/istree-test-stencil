@@ -4,15 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
-    <link rel="stylesheet" href="/build/istree-test-stencil.css">
+    <link rel="stylesheet" href="/build/istree-test-stencil.css" />
 
     <script type="module" src="/build/istree-test-stencil.esm.js"></script>
     <script nomodule src="/build/istree-test-stencil.js"></script>
   </head>
   <body>
     <div class="container">
-      <istree-button primary>primary</istree-button>
-      <istree-button tomato>tomato</istree-button>
+      <div class="row">
+        <istree-button primary>primary</istree-button>
+        <istree-button id="btnTomato" tomato>tomato</istree-button>
+      </div>
     </div>
+    <script>
+      const btnTomato = document.querySelector('#btnTomato');
+      btnTomato.isLoading = true;
+
+      document.addEventListener('DOMContentLoaded', () => {
+        function clickHandler() {
+          this.isLoading = !this.isLoading;
+        }
+
+        document.querySelectorAll('istree-button').forEach(btn => {
+          btn.addEventListener('click', clickHandler);
+        });
+      });
+    </script>
   </body>
 </html>

@@ -38,7 +38,11 @@ export class IstreeButton {
   }
   render() {
     return (h("button", { class: Object.assign({}, this.getAppearance()) },
-      this.isLoading && h("span", { style: { 'margin-right': '10px' }, class: "loader" }),
+      this.isLoading && (h("div", { style: { 'margin-right': '10px' }, class: "lds-ring" },
+        h("div", null),
+        h("div", null),
+        h("div", null),
+        h("div", null))),
       h("slot", null)));
   }
   static get is() { return "istree-button"; }

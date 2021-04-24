@@ -46,7 +46,14 @@ export class IstreeButton {
   render() {
     return (
       <button class={{ ...this.getAppearance() }}>
-        {this.isLoading && <span style={{'margin-right': '10px'}} class="loader"></span>}
+        {this.isLoading && (
+          <div style={{ 'margin-right': '10px' }} class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        )}
         <slot />
       </button>
     );

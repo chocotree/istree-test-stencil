@@ -1,0 +1,12 @@
+{
+  "entries": [
+    "./components/istree-button/istree-button.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.5.2",
+    "typescriptVersion": "4.2.3"
+  },
+  "collections": [],
+  "bundles": []
+}

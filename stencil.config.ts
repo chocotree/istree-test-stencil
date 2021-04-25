@@ -1,8 +1,13 @@
 import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'istree-test-stencil',
-  globalStyle: 'src/global/global.css',
+  plugins: [
+    sass({
+      injectGlobalPaths: ['src/global/global.scss'],
+    }),
+  ],
   outputTargets: [
     {
       type: 'dist',

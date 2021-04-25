@@ -4,29 +4,38 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
-    <link rel="stylesheet" href="/build/istree-test-stencil.css" />
 
     <script type="module" src="/build/istree-test-stencil.esm.js"></script>
     <script nomodule src="/build/istree-test-stencil.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <istree-button primary>primary</istree-button>
-        <istree-button id="btnTomato" tomato>tomato</istree-button>
-      </div>
+    <h3>Buttons</h3>
+    <div style="display: flex; justify-content: space-between">
+      <istree-button primary>primary</istree-button>
+      <istree-button secondary>secondary</istree-button>
+      <istree-button brand>brand</istree-button>
+      <istree-button id="btnTomato" tomato is-loading>tomato</istree-button>
+      <istree-button functional>functional</istree-button>
     </div>
-    <script>
-      const btnTomato = document.querySelector('#btnTomato');
-      btnTomato.isLoading = true;
 
+    <h3>Buttons outlined</h3>
+    <div style="display: flex; justify-content: space-between">
+      <istree-button primary outlined>primary</istree-button>
+      <istree-button secondary outlined is-loading>secondary</istree-button>
+      <istree-button brand outlined>brand</istree-button>
+      <istree-button id="btnTomato" tomato outlined>tomato</istree-button>
+      <istree-button functional outlined>functional</istree-button>
+    </div>
+
+    <script>
       document.addEventListener('DOMContentLoaded', () => {
         function clickHandler() {
           this.isLoading = !this.isLoading;
         }
 
         document.querySelectorAll('istree-button').forEach(btn => {
-          btn.addEventListener('click', clickHandler);
+          // toggle button loader
+          // btn.addEventListener('click', clickHandler);
         });
       });
     </script>

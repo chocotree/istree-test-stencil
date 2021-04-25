@@ -12,6 +12,7 @@
 | `brand`      | `brand`      | theme         | `boolean` | `false` |
 | `functional` | `functional` | theme         | `boolean` | `false` |
 | `isLoading`  | `is-loading` | 顯示 loading 狀態 | `boolean` | `false` |
+| `outlined`   | `outlined`   | theme         | `boolean` | `false` |
 | `primary`    | `primary`    | theme         | `boolean` | `false` |
 | `secondary`  | `secondary`  | theme         | `boolean` | `false` |
 | `tomato`     | `tomato`     | theme         | `boolean` | `false` |

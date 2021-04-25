@@ -19,7 +19,11 @@ export declare class IstreeButton {
    * theme
    */
   tomato: boolean;
-  private getAppearance;
+  /**
+   * theme
+   */
+  outlined: boolean;
+  private getStyle;
   /**
    * 顯示 loading 狀態
    */

@@ -22,11 +22,15 @@ export class IstreeButton {
      */
     this.tomato = false;
     /**
+     * theme
+     */
+    this.outlined = false;
+    /**
      * 顯示 loading 狀態
      */
     this.isLoading = false;
   }
-  getAppearance() {
+  getStyle() {
     return {
       btn: true,
       primary: this.primary,
@@ -34,10 +38,12 @@ export class IstreeButton {
       functional: this.functional,
       brand: this.brand,
       tomato: this.tomato,
+      loading: this.isLoading,
+      outlined: this.outlined,
     };
   }
   render() {
-    return (h("button", { class: Object.assign({}, this.getAppearance()) },
+    return (h("button", { class: Object.assign({}, this.getStyle()) },
       this.isLoading && (h("div", { style: { 'margin-right': '10px' }, class: "lds-ring" },
         h("div", null),
         h("div", null),
@@ -48,7 +54,7 @@ export class IstreeButton {
   static get is() { return "istree-button"; }
   static get encapsulation() { return "shadow"; }
   static get originalStyleUrls() { return {
-    "$": ["istree-button.css"]
+    "$": ["istree-button.scss"]
   }; }
   static get styleUrls() { return {
     "$": ["istree-button.css"]
@@ -141,6 +147,24 @@ export class IstreeButton {
         "text": "theme"
       },
       "attribute": "tomato",
+      "reflect": false,
+      "defaultValue": "false"
+    },
+    "outlined": {
+      "type": "boolean",
+      "mutable": false,
+      "complexType": {
+        "original": "boolean",
+        "resolved": "boolean",
+        "references": {}
+      },
+      "required": false,
+      "optional": false,
+      "docs": {
+        "tags": [],
+        "text": "theme"
+      },
+      "attribute": "outlined",
       "reflect": false,
       "defaultValue": "false"
     },

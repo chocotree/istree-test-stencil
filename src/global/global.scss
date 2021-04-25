@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+$hoverOpacity: 0.8;
+
+$primary: rgba(33, 150, 243, 1);
+$primaryHover: rgba(33, 150, 243, $hoverOpacity);
+$secondary: rgba(145, 145, 145, 1);
+$secondaryHover: rgba(145, 145, 145, $hoverOpacity);
+$functional: rgba(49, 178, 124, 1);
+$functionalHover: rgba(49, 178, 124, $hoverOpacity);
+$brand: rgba(232, 73, 137, 1);
+$brandHover: rgba(232, 73, 137, $hoverOpacity);
+$tomato: rgb(255, 99, 71);
+$tomatoHover: rgba(255, 99, 71, $hoverOpacity);
+$white: #fff;

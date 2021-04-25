@@ -2,7 +2,7 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'istree-button',
-  styleUrl: 'istree-button.css',
+  styleUrl: 'istree-button.scss',
   shadow: true,
 })
 export class IstreeButton {
@@ -26,8 +26,12 @@ export class IstreeButton {
    * theme
    */
   @Prop() tomato = false;
+  /**
+   * theme
+   */
+  @Prop() outlined = false;
 
-  private getAppearance() {
+  private getStyle() {
     return {
       btn: true,
       primary: this.primary,
@@ -35,6 +39,8 @@ export class IstreeButton {
       functional: this.functional,
       brand: this.brand,
       tomato: this.tomato,
+      loading: this.isLoading,
+      outlined: this.outlined,
     };
   }
 
@@ -45,7 +51,7 @@ export class IstreeButton {
 
   render() {
     return (
-      <button class={{ ...this.getAppearance() }}>
+      <button class={{ ...this.getStyle() }}>
         {this.isLoading && (
           <div style={{ 'margin-right': '10px' }} class="lds-ring">
             <div></div>

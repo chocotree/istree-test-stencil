@@ -1,0 +1,224 @@
+@import '../../global/global.scss';
+@import './loader.scss';
+
+// outlined 按鈕
+%btnOutlined {
+  background: none;
+
+  &:hover {
+    // loader 狀態
+    .lds-ring div {
+      border-color: $white transparent transparent transparent;
+    }
+  }
+}
+
+$shadowPx: 6px;
+
+:host {
+  display: inline-block;
+}
+
+.lds-ring {
+  opacity: 0;
+}
+
+.btn {
+  background: gray;
+  color: #333;
+  border-radius: 4px;
+  padding: 0 12px;
+  height: 38px;
+  outline: none;
+  transition: 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  position: relative;
+  border: 1px solid transparent;
+
+  &:before {
+    content: '';
+    display: block;
+    border-radius: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: 0.2s ease;
+    opacity: 0;
+    transform: scale(1.15);
+  }
+
+  &:active::before {
+    transition: 0s;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &.loading {
+    opacity: 0.85;
+    padding-left: 38px;
+
+    .lds-ring {
+      animation-name: loadingAppear;
+      animation-duration: 0.4s;
+      animation-delay: 0.2s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes loadingAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn.primary {
+  background-color: $primary;
+  color: $white;
+
+  &:before {
+    box-shadow: 0 0 $shadowPx 0 $primary;
+  }
+
+  &:hover {
+    background-color: $primaryHover;
+  }
+}
+
+.btn.primary.outlined {
+  @extend %btnOutlined;
+  color: $primary;
+  border: 1px solid $primary;
+
+  &:hover {
+    color: $white;
+    background-color: $primary;
+  }
+
+  .lds-ring div {
+    border-color: $primary transparent transparent transparent;
+  }
+}
+
+.btn.secondary {
+  background-color: $secondary;
+  color: $white;
+
+  &:before {
+    box-shadow: 0 0 $shadowPx 0 $secondary;
+  }
+
+  &:hover {
+    background-color: $secondaryHover;
+  }
+}
+
+.btn.secondary.outlined {
+  @extend %btnOutlined;
+  color: $secondary;
+  border: 1px solid $secondary;
+
+  &:hover {
+    color: $white;
+    background-color: $secondary;
+  }
+
+  .lds-ring div {
+    border-color: $secondary transparent transparent transparent;
+  }
+}
+
+.btn.functional {
+  background-color: $functional;
+  color: $white;
+
+  &:before {
+    box-shadow: 0 0 $shadowPx 0 $functional;
+  }
+
+  &:hover {
+    background-color: $functionalHover;
+  }
+}
+
+.btn.functional.outlined {
+  @extend %btnOutlined;
+  color: $functional;
+  border: 1px solid $functional;
+
+  &:hover {
+    color: $white;
+    background-color: $functional;
+  }
+
+  .lds-ring div {
+    border-color: $functional transparent transparent transparent;
+  }
+}
+
+.btn.brand {
+  background-color: $brand;
+  color: $white;
+
+  &:before {
+    box-shadow: 0 0 $shadowPx 0 $brand;
+  }
+
+  &:hover {
+    background-color: $brandHover;
+  }
+}
+
+.btn.brand.outlined {
+  @extend %btnOutlined;
+  color: $brand;
+  border: 1px solid $brand;
+
+  &:hover {
+    color: $white;
+    background-color: $brand;
+  }
+
+  .lds-ring div {
+    border-color: $brand transparent transparent transparent;
+  }
+}
+
+.btn.tomato {
+  background-color: $tomato;
+  color: $white;
+
+  &:before {
+    box-shadow: 0 0 $shadowPx 0 $tomato;
+  }
+
+  &:hover {
+    background-color: $tomatoHover;
+  }
+}
+
+.btn.tomato.outlined {
+  @extend %btnOutlined;
+  color: $tomato;
+  border: 1px solid $tomato;
+
+  &:hover {
+    color: $white;
+    background-color: $tomato;
+  }
+
+  .lds-ring div {
+    border-color: $tomato transparent transparent transparent;
+  }
+}

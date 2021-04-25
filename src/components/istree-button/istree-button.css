@@ -3,8 +3,8 @@
 }
 
 .btn {
-  background: var(--mono-10);
-  color: var(--mono-70);
+  background: gray;
+  color: #000;
   border-radius: 4px;
   border: none;
   padding: 0 12px;
@@ -16,6 +16,10 @@
   justify-content: center;
   align-items: center;
   font-family: inherit;
+}
+
+.btn.loading {
+  opacity: 0.85;
 }
 
 .btn.primary {
@@ -43,6 +47,7 @@
 
 .btn.functional:hover {
   background-color: var(--functionalHover);
+  color: #fff;
 }
 
 .btn.brand {
@@ -61,6 +66,12 @@
 
 .btn.tomato:hover {
   background-color: rgba(255, 99, 71, 0.9);
+}
+
+.btn.outlined {
+  background: none;
+  border: 1px solid var(--functional);
+  color: var(--functional);
 }
 
 .lds-ring {

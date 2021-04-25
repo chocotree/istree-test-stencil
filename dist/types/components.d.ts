@@ -22,6 +22,10 @@ export namespace Components {
         /**
           * theme
          */
+        "outlined": boolean;
+        /**
+          * theme
+         */
         "primary": boolean;
         /**
           * theme
@@ -58,6 +62,10 @@ declare namespace LocalJSX {
           * 顯示 loading 狀態
          */
         "isLoading"?: boolean;
+        /**
+          * theme
+         */
+        "outlined"?: boolean;
         /**
           * theme
          */

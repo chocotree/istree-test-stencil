@@ -15,5 +15,5 @@ const patchBrowser = () => {
 };
 
 patchBrowser().then(options => {
-  return index.bootstrapLazy([["istree-button.cjs",[[1,"istree-button",{"primary":[4],"secondary":[4],"functional":[4],"brand":[4],"tomato":[4],"isLoading":[4,"is-loading"]}]]]], options);
+  return index.bootstrapLazy([["istree-button.cjs",[[1,"istree-button",{"primary":[4],"secondary":[4],"functional":[4],"brand":[4],"tomato":[4],"outlined":[4],"isLoading":[4,"is-loading"]}]]]], options);
 });
